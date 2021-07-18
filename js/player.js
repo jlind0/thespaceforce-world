@@ -1,6 +1,3 @@
-export function onYouTubeIframeAPIReady() {
-    StartVideo = new YouTubePlayer($("#topPlayer").get(0), "M6bumUQwQIU", 16.0 / 9.0);
-}
 var YouTubePlayer = (function () {
     function YouTubePlayer(panel, videoId, aspectRatio) {
         var _this = this;

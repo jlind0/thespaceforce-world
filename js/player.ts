@@ -3,9 +3,10 @@
 ///<reference path="../node_modules/@types/youtube/index.d.ts"/>
 ///<reference path="../node_modules/@types/youtube-player/index.d.ts"/>
 declare var StartVideo : YouTubePlayer;
-export function onYouTubeIframeAPIReady() : void{
+/*export function onYouTubeIframeAPIReady() : void{
     StartVideo = new YouTubePlayer($("#topPlayer").get(0), "M6bumUQwQIU", 16.0/9.0);
-}
+}*/
+
 export class YouTubePlayer{
     protected Player : YT.Player;
     constructor(protected panel : HTMLElement, videoId: string, protected aspectRatio : number){
