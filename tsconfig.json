@@ -1,0 +1,16 @@
+{
+  "forceConsitentCasingInFileNames": true,
+  "noImplicitReturns": true,
+  "strict": true,
+  "noUnusedLocals": true,
+  "compilerOptions": {
+    "module": "es6",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true
+  },
+  "include": ["js", "**/*.ts"],
+  "exclude": ["node_modules", "**/*.d.ts"]
+}
+  

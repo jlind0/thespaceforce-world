@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+        "@types/jquery": "^3.5.6",
+        "@types/knockout": "^3.4.71",
+        "@types/youtube": "0.0.44",
+        "@types/youtube-player": "^5.5.4",
+        "youtube-player": "^5.5.2"
+    }
+}

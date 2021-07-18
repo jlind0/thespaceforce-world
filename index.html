@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Magazee HTML5 Template Mo</title>
+  <title>The Space Force</title>
 <!-- 
 Magazee Template 
 http://www.templatemo.com/tm-514-magazee
@@ -40,8 +40,8 @@ http://www.templatemo.com/tm-514-magazee
   <!-- 1st section -->
   <section class="row tm-section">
    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
-    <div class="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h">
-      <h1 class="tm-text-color-white tm-site-name">Magazee</h1>
+    <div class="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h" >
+      <div id="topPlayer"></div>
     </div>
   </div>
   <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
@@ -258,6 +258,14 @@ http://www.templatemo.com/tm-514-magazee
   });
 
 </script>
+<script type="module" src="js/player.js"></script>
+<script type="text/javascript">
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+
 
 </body>
 </html>
