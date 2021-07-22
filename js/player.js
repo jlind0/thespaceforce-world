@@ -14,8 +14,8 @@ var YouTubePlayer = (function () {
                 }
             },
             playerVars: {
-                autoplay: YT.AutoPlay.AutoPlay,
-                playsinline: YT.PlaysInline.Inline
+                autoplay: 1,
+                playsinline: 1
             }
         });
         window.onresize = function () {
@@ -36,4 +36,5 @@ var YouTubePlayer = (function () {
     return YouTubePlayer;
 }());
 export { YouTubePlayer };
+window.YouTubePlayer = YouTubePlayer;
 //# sourceMappingURL=player.js.map
