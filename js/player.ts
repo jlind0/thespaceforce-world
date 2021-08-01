@@ -32,7 +32,7 @@ export class YouTubePlayer{
                 onReady: (evt) =>{
                     evt.target.mute();
                     evt.target.playVideo();
-                    setTimeout(() => evt.target.unMute(), 1000);
+                    setTimeout(() => evt.target.unMute(), 5000);
                 }
             }
         });
