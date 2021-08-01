@@ -11,12 +11,8 @@ var YouTubePlayer = (function () {
             width: size.Width,
             playerVars: {
                 playsinline: 1,
-                origin: "thespaceforce.world"
-            },
-            events: {
-                onReady: function (evt) {
-                    evt.target.playVideo();
-                }
+                origin: "thespaceforce.world",
+                autoplay: 1
             }
         });
         window.onresize = function () {
