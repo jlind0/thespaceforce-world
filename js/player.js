@@ -17,11 +17,11 @@ var YouTubePlayer = (function () {
             },
             events: {
                 onReady: function (evt) {
+                    evt.target.mute();
                     evt.target.playVideo();
                 }
             }
         });
-        this.Player.mute();
         window.onresize = function () {
             if (_this.Player != null) {
                 size = _this.CalcVideoSize();

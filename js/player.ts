@@ -26,19 +26,16 @@ export class YouTubePlayer{
             playerVars:{
                 playsinline: YT.PlaysInline.Inline,
                 origin: 'https://'+ window.location.host,
-                autoplay: YT.AutoPlay.AutoPlay,
+                autoplay: YT.AutoPlay.AutoPlay
                 
             },
             events: {
                 onReady: (evt) =>{
+                    evt.target.mute();
                     evt.target.playVideo();
-                }/*,
-                onStateChange :(evt) =>{
-                    evt.target.unMute();
-                }*/
+                }
             }
         });
-        this.Player.mute();
         window.onresize = ()=>{
             if(this.Player != null){
                 size = this.CalcVideoSize();
