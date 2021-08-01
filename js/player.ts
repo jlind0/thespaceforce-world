@@ -21,12 +21,11 @@ export class YouTubePlayer{
             height: size.Height,
             width: size.Width,
             events: {
-                onReady: () =>{
-                    this.Player.playVideo();
+                onReady: (event) =>{
+                    event.target.playVideo();
                 }
             },
             playerVars:{
-                autoplay: YT.AutoPlay.AutoPlay,
                 playsinline: YT.PlaysInline.Inline,
                 origin: "https://thespaceforce.world"
             }

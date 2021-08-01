@@ -9,12 +9,11 @@ var YouTubePlayer = (function () {
             height: size.Height,
             width: size.Width,
             events: {
-                onReady: function () {
-                    _this.Player.playVideo();
+                onReady: function (event) {
+                    event.target.playVideo();
                 }
             },
             playerVars: {
-                autoplay: 1,
                 playsinline: 1,
                 origin: "https://thespaceforce.world"
             }
