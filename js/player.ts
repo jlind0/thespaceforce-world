@@ -35,7 +35,7 @@ export class YouTubePlayer{
                 }
             }*/
         });
-        this.Player.getIframe().allow = "autoplay";
+        //this.Player.getIframe().allow = "autoplay";
         window.onresize = ()=>{
             if(this.Player != null){
                 size = this.CalcVideoSize();
