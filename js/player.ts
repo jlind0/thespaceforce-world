@@ -27,7 +27,9 @@ export class YouTubePlayer{
             },*/
             playerVars:{
                 playsinline: YT.PlaysInline.Inline,
-                origin: "https://thespaceforce.world"
+                origin: "https://thespaceforce.world",
+                autoplay: YT.AutoPlay.AutoPlay,
+                
             }
         });
         window.onresize = ()=>{
