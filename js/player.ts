@@ -30,12 +30,11 @@ export class YouTubePlayer{
                 
             },
             events: {
-                'onReady': (evt) =>{
+                onReady: (evt) =>{
                     evt.target.playVideo();
                 }
             }
         });
-        this.Player.getIframe().allow = "autoplay";
         window.onresize = ()=>{
             if(this.Player != null){
                 size = this.CalcVideoSize();
