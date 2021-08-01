@@ -20,11 +20,11 @@ export class YouTubePlayer{
             videoId: videoId,
             height: size.Height,
             width: size.Width,
-            events: {
+           /* events: {
                 'onReady': (event) =>{
                     event.target.playVideo();
                 }
-            },
+            },*/
             playerVars:{
                 playsinline: YT.PlaysInline.Inline,
                 origin: "https://thespaceforce.world"
