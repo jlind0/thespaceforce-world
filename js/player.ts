@@ -24,9 +24,13 @@ export class YouTubePlayer{
             width: size.Width,
             playerVars:{
                 playsinline: YT.PlaysInline.Inline,
-                origin: "thespaceforce.world",
-                autoplay: YT.AutoPlay.AutoPlay
+                origin: "thespaceforce.world"
                 
+            },
+            events: {
+                onReady: (evt) =>{
+                    evt.target.playVideo();
+                }
             }
         });
         //this.Player.getIframe().allow = "autoplay";
