@@ -28,12 +28,12 @@ export class YouTubePlayer{
                 origin: 'https://'+ window.location.host,
                 autoplay: YT.AutoPlay.AutoPlay,
                 
-            },
+            }/*,
             events: {
                 'onReady': (evt) =>{
                     evt.target.playVideo();
                 }
-            }
+            }*/
         });
         //this.Player.getIframe().allow = "autoplay";
         window.onresize = ()=>{
