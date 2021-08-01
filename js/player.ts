@@ -24,7 +24,7 @@ export class YouTubePlayer{
             width: size.Width,
             playerVars:{
                 playsinline: YT.PlaysInline.Inline,
-                origin: "https://thespaceforce.world",
+                origin: "thespaceforce.world",
                 autoplay: YT.AutoPlay.AutoPlay,
                 enablejsapi: YT.JsApi.Enable
                 

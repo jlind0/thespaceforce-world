@@ -11,7 +11,7 @@ var YouTubePlayer = (function () {
             width: size.Width,
             playerVars: {
                 playsinline: 1,
-                origin: "https://thespaceforce.world",
+                origin: "thespaceforce.world",
                 autoplay: 1,
                 enablejsapi: 1
             }
