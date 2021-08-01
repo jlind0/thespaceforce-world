@@ -21,6 +21,7 @@ var YouTubePlayer = (function () {
                 }
             }
         });
+        this.Player.getIframe().allow = "autoplay";
         window.onresize = function () {
             if (_this.Player != null) {
                 size = _this.CalcVideoSize();
