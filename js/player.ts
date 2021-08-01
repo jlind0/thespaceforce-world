@@ -25,7 +25,7 @@ export class YouTubePlayer{
             playerVars:{
                 playsinline: YT.PlaysInline.Inline,
                 origin: "https://thespaceforce.world",
-                autoplay: YT.AutoPlay.AutoPlay,
+                autoplay: YT.AutoPlay.AutoPlay
                 
             }
         });
