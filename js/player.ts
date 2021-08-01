@@ -28,14 +28,14 @@ export class YouTubePlayer{
                 origin: 'https://'+ window.location.host,
                 autoplay: YT.AutoPlay.AutoPlay,
                 
-            }/*,
+            },
             events: {
                 'onReady': (evt) =>{
                     evt.target.playVideo();
                 }
-            }*/
+            }
         });
-        //this.Player.getIframe().allow = "autoplay";
+        this.Player.getIframe().allow = "autoplay";
         window.onresize = ()=>{
             if(this.Player != null){
                 size = this.CalcVideoSize();

@@ -14,8 +14,14 @@ var YouTubePlayer = (function () {
                 playsinline: 1,
                 origin: 'https://' + window.location.host,
                 autoplay: 1
+            },
+            events: {
+                'onReady': function (evt) {
+                    evt.target.playVideo();
+                }
             }
         });
+        this.Player.getIframe().allow = "autoplay";
         window.onresize = function () {
             if (_this.Player != null) {
                 size = _this.CalcVideoSize();
