@@ -18,9 +18,6 @@ var YouTubePlayer = (function () {
             events: {
                 onReady: function (evt) {
                     evt.target.playVideo();
-                },
-                onStateChange: function (evt) {
-                    evt.target.unMute();
                 }
             }
         });

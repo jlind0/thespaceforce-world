@@ -32,10 +32,10 @@ export class YouTubePlayer{
             events: {
                 onReady: (evt) =>{
                     evt.target.playVideo();
-                },
+                }/*,
                 onStateChange :(evt) =>{
                     evt.target.unMute();
-                }
+                }*/
             }
         });
         this.Player.mute();
