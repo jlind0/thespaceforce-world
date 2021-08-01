@@ -16,6 +16,7 @@ var YouTubePlayer = (function () {
                 autoplay: 1
             }
         });
+        this.Player.getIframe().allow = "autoplay";
         window.onresize = function () {
             if (_this.Player != null) {
                 size = _this.CalcVideoSize();
