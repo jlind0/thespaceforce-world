@@ -14,6 +14,7 @@ var YouTubePlayer = (function () {
                 }
             },
             playerVars: {
+                autoplay: 1,
                 playsinline: 1,
                 origin: "https://thespaceforce.world"
             }
