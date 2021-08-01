@@ -9,9 +9,10 @@ var YouTubePlayer = (function () {
             videoId: videoId,
             height: size.Height,
             width: size.Width,
+            host: "https://www.youtube.com",
             playerVars: {
                 playsinline: 1,
-                origin: window.location.host,
+                origin: 'https://' + window.location.host,
                 autoplay: 1
             }
         });
