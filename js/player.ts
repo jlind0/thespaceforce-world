@@ -26,7 +26,7 @@ export class YouTubePlayer{
             playerVars:{
                 playsinline: YT.PlaysInline.Inline,
                 origin: 'https://'+ window.location.host,
-                autoplay: YT.AutoPlay.AutoPlay,
+                autoplay: YT.AutoPlay.AutoPlay
                 
             },
             events: {
