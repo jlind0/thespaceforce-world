@@ -39,7 +39,7 @@ http://www.templatemo.com/tm-514-magazee
 
   <!-- 1st section -->
   <section class="row tm-section">
-   <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
+   <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0" id="playerWrapper">
     <div class="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h" >
       <div id="topPlayer"></div>
     </div>
@@ -267,7 +267,7 @@ http://www.templatemo.com/tm-514-magazee
 </script>
 <script type="text/javascript">
 function onYouTubeIframeAPIReady(){
-    StartVideo = new YouTubePlayer($("#topPlayer").get(0), "M6bumUQwQIU", 16.0/9.0);
+    StartVideo = new YouTubePlayer($("#playerWrapper").get(0), "pmQsrXLofMY", 9.0/16.0);
   }
 </script>
 </body>
