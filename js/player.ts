@@ -25,12 +25,11 @@ export class YouTubePlayer{
             playerVars:{
                 playsinline: YT.PlaysInline.Inline,
                 origin: "thespaceforce.world",
-                autoplay: YT.AutoPlay.AutoPlay,
-                enablejsapi: YT.JsApi.Enable
+                autoplay: YT.AutoPlay.AutoPlay
                 
             }
         });
-        this.Player.getIframe().allow = "autoplay";
+        //this.Player.getIframe().allow = "autoplay";
         window.onresize = ()=>{
             if(this.Player != null){
                 size = this.CalcVideoSize();

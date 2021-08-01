@@ -12,11 +12,9 @@ var YouTubePlayer = (function () {
             playerVars: {
                 playsinline: 1,
                 origin: "thespaceforce.world",
-                autoplay: 1,
-                enablejsapi: 1
+                autoplay: 1
             }
         });
-        this.Player.getIframe().allow = "autoplay";
         window.onresize = function () {
             if (_this.Player != null) {
                 size = _this.CalcVideoSize();
