@@ -14,7 +14,7 @@ var YouTubePlayer = (function () {
                 autoplay: 1
             }
         });
-        window.onresize = function () {
+        panel.onresize = function () {
             if (_this.Player != null) {
                 size = _this.CalcVideoSize();
                 _this.Player.setSize(size.Width, size.Height);

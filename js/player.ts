@@ -20,11 +20,6 @@ export class YouTubePlayer{
             videoId: videoId,
             height: size.Height,
             width: size.Width,
-           /* events: {
-                'onReady': (event) =>{
-                    event.target.playVideo();
-                }
-            },*/
             playerVars:{
                 playsinline: YT.PlaysInline.Inline,
                 origin: "https://thespaceforce.world",
@@ -32,7 +27,7 @@ export class YouTubePlayer{
                 
             }
         });
-        window.onresize = ()=>{
+        panel.onresize = ()=>{
             if(this.Player != null){
                 size = this.CalcVideoSize();
                 this.Player.setSize(size.Width, size.Height);
