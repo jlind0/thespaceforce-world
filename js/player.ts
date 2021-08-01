@@ -27,12 +27,12 @@ export class YouTubePlayer{
                 playsinline: YT.PlaysInline.Inline,
                 origin: 'https://'+ window.location.host,
                 autoplay: YT.AutoPlay.AutoPlay
-                
             },
             events: {
                 onReady: (evt) =>{
                     evt.target.mute();
                     evt.target.playVideo();
+                    setTimeout(() => evt.target.unMute(), 100);
                 }
             }
         });
