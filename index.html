@@ -39,15 +39,15 @@ http://www.templatemo.com/tm-514-magazee
 
   <!-- 1st section -->
   <section class="row tm-section">
-   <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0" id="playerWrapper">
-    <div class="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h" >
+   <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0">
+    <div class="tm-flex-center p-5 tm-bg-color-primary tm-section-min-h tm-flex-col" id="playerWrapper" >
+      <h1 class="tm-text-color-white mb-0">Welcome to The Space Force!</h1>
       <div id="topPlayer"></div>
+      <h2 class="tm-text-color-white mb-0"><i>A NATO Level NGO Promoting Transformation of Adversarial Cyber+Space</i></h2>
     </div>
   </div>
-  <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-    <div class="tm-flex-center p-5">
-      <q class="tm-quote tm-text-color-gray">Ut sit amet augue elit. Vivamus eget tortor in ante scelerisque gravida. Vestibulum auctor condimentum sem.</q>
-    </div>
+  <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 p-0 text-center">
+    <img src="img/logo.png" alt="Image" class="img-fluid">
   </div>
 </section>
 
@@ -267,7 +267,7 @@ http://www.templatemo.com/tm-514-magazee
 </script>
 <script type="text/javascript">
 function onYouTubeIframeAPIReady(){
-    StartVideo = new YouTubePlayer($("#playerWrapper").get(0), "pmQsrXLofMY", 9.0/16.0);
+    StartVideo = new YouTubePlayer($("#topPlayer").get(0), "pmQsrXLofMY", 9.0/16.0);
   }
 </script>
 </body>

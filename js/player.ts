@@ -14,7 +14,9 @@ declare global{
 }
 export class YouTubePlayer{
     protected Player : YT.Player;
+    protected HostPanel : HTMLElement;
     constructor(protected panel : HTMLElement, videoId: string, protected aspectRatio : number){
+        this.HostPanel = $("#playerWrapper").get(0);
         var size = this.CalcVideoSize();
         this.Player = new YT.Player(panel, {
             videoId: videoId,
@@ -27,7 +29,7 @@ export class YouTubePlayer{
                 
             }
         });
-        panel.onresize = ()=>{
+        this.HostPanel.onresize = ()=>{
             if(this.Player != null){
                 size = this.CalcVideoSize();
                 this.Player.setSize(size.Width, size.Height);
@@ -35,7 +37,7 @@ export class YouTubePlayer{
         };
     }
     protected CalcVideoSize() : VideoSize{
-        var width = Math.floor($(this.panel).width() * 0.98);
+        var width = Math.floor($(this.HostPanel).width() * 0.98);
         var height = Math.floor(width*this.aspectRatio)
         return{
             Width: width,

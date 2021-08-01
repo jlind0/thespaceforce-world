@@ -12,7 +12,9 @@ body {
     color: #666666;
     background-color: #f4f4f4;
 }
-
+.logo{
+    background-image: url('../img/logo.png');
+}
 p, q { line-height: 1.8; }
 h2 { font-size: 1.8rem; }
 

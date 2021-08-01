@@ -3,6 +3,7 @@ var YouTubePlayer = (function () {
         var _this = this;
         this.panel = panel;
         this.aspectRatio = aspectRatio;
+        this.HostPanel = $("#playerWrapper").get(0);
         var size = this.CalcVideoSize();
         this.Player = new YT.Player(panel, {
             videoId: videoId,
@@ -14,7 +15,7 @@ var YouTubePlayer = (function () {
                 autoplay: 1
             }
         });
-        panel.onresize = function () {
+        this.HostPanel.onresize = function () {
             if (_this.Player != null) {
                 size = _this.CalcVideoSize();
                 _this.Player.setSize(size.Width, size.Height);
@@ -22,7 +23,7 @@ var YouTubePlayer = (function () {
         };
     }
     YouTubePlayer.prototype.CalcVideoSize = function () {
-        var width = Math.floor($(this.panel).width() * 0.98);
+        var width = Math.floor($(this.HostPanel).width() * 0.98);
         var height = Math.floor(width * this.aspectRatio);
         return {
             Width: width,
