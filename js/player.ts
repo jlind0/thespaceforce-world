@@ -26,7 +26,7 @@ export class YouTubePlayer{
                 }
             },
             playerVars:{
-                autoplay: YT.AutoPlay.AutoPlay,
+                /*autoplay: YT.AutoPlay.AutoPlay,*/
                 playsinline: YT.PlaysInline.Inline
             }
         });
