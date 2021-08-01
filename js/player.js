@@ -19,7 +19,6 @@ var YouTubePlayer = (function () {
                 onReady: function (evt) {
                     evt.target.mute();
                     evt.target.playVideo();
-                    setTimeout(function () { return evt.target.unMute(); }, 5000);
                 }
             }
         });
