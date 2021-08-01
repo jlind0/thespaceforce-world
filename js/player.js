@@ -18,10 +18,13 @@ var YouTubePlayer = (function () {
             events: {
                 onReady: function (evt) {
                     evt.target.playVideo();
+                },
+                onStateChange: function (evt) {
+                    evt.target.unMute();
                 }
             }
         });
-        this.Player.getIframe().allow = "autoplay";
+        this.Player.mute();
         window.onresize = function () {
             if (_this.Player != null) {
                 size = _this.CalcVideoSize();
