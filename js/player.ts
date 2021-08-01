@@ -22,10 +22,11 @@ export class YouTubePlayer{
             videoId: videoId,
             height: size.Height,
             width: size.Width,
+            host: "https://www.youtube.com",
             playerVars:{
                 playsinline: YT.PlaysInline.Inline,
-                origin: "thespaceforce.world",
-                autoplay: YT.AutoPlay.AutoPlay
+                origin: 'https://'+ window.location.host,
+                autoplay: YT.AutoPlay.AutoPlay,
                 
             }/*,
             events: {

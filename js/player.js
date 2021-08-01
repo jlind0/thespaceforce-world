@@ -11,7 +11,7 @@ var YouTubePlayer = (function () {
             width: size.Width,
             playerVars: {
                 playsinline: 1,
-                origin: "thespaceforce.world",
+                origin: window.location.host,
                 autoplay: 1
             }
         });
