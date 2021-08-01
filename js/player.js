@@ -15,7 +15,7 @@ var YouTubePlayer = (function () {
                 autoplay: 1
             }
         });
-        this.HostPanel.onresize = function () {
+        window.onresize = function () {
             if (_this.Player != null) {
                 size = _this.CalcVideoSize();
                 _this.Player.setSize(size.Width, size.Height);
@@ -23,7 +23,7 @@ var YouTubePlayer = (function () {
         };
     }
     YouTubePlayer.prototype.CalcVideoSize = function () {
-        var width = Math.floor($(this.HostPanel).width() * 0.98);
+        var width = Math.floor($("#playerInner").width() * 0.98);
         var height = Math.floor(width * this.aspectRatio);
         return {
             Width: width,

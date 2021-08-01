@@ -29,7 +29,7 @@ export class YouTubePlayer{
                 
             }
         });
-        this.HostPanel.onresize = ()=>{
+        window.onresize = ()=>{
             if(this.Player != null){
                 size = this.CalcVideoSize();
                 this.Player.setSize(size.Width, size.Height);
@@ -37,7 +37,7 @@ export class YouTubePlayer{
         };
     }
     protected CalcVideoSize() : VideoSize{
-        var width = Math.floor($(this.HostPanel).width() * 0.98);
+        var width = Math.floor($("#playerInner").width() * 0.98);
         var height = Math.floor(width*this.aspectRatio)
         return{
             Width: width,
