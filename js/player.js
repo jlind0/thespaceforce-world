@@ -9,7 +9,7 @@ var YouTubePlayer = (function () {
             height: size.Height,
             width: size.Width,
             events: {
-                onReady: function (event) {
+                'onReady': function (event) {
                     event.target.playVideo();
                 }
             },

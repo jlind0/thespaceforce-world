@@ -21,7 +21,7 @@ export class YouTubePlayer{
             height: size.Height,
             width: size.Width,
             events: {
-                onReady: (event) =>{
+                'onReady': (event) =>{
                     event.target.playVideo();
                 }
             },
