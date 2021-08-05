@@ -12,6 +12,20 @@ body {
     color: #666666;
     background-color: #f4f4f4;
 }
+.table tbody th{
+    vertical-align: middle;
+    text-align: center;
+}
+.table tbody td{
+    vertical-align: middle;
+    text-align: center;
+}
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th{
+    background-color:rgb(236, 231, 231);
+}
+.row-white{
+    background-color: white !important;
+}
 .logo{
     background-color: #C66626;
 }
@@ -63,7 +77,7 @@ h2 { font-size: 1.8rem; }
 
 .btn {
     border-radius: 0;
-    padding: 12px 47px;
+    padding: 12px 15px;
     margin: 20px;
     font-size: 1.15rem;
 }
