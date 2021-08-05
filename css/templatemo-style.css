@@ -63,8 +63,8 @@ h2 { font-size: 1.8rem; }
 
 .btn {
     border-radius: 0;
-    text-transform: uppercase;
     padding: 12px 47px;
+    margin: 20px;
     font-size: 1.15rem;
 }
 
