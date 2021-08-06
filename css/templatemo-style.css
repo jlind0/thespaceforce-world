@@ -12,12 +12,8 @@ body {
     color: #666666;
     background-color: #f4f4f4;
 }
-.rank-table{
-    overflow-x: auto;
-    display: inline-block;
-}
-.rank-table table{
-    min-width: 500px;
+.table-responsive-xl::webkit:scroll{
+    display:table;
 }
 .table tbody th{
     vertical-align: middle;
