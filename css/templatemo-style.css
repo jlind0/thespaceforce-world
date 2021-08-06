@@ -375,11 +375,16 @@ select:focus {
     body{
         transform: rotate(-90deg);
         transform-origin: left top;
-        width: 95vh;
+        width: 90vh;
         overflow:scroll;
         position: absolute;
         top: 100%;
         left:0;
+    }
+    @supports (-ms-ime-align: auto) {
+        body{
+            width: 100vh !important;
+        }
     }
     
 }
