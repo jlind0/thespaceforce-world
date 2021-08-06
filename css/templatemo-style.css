@@ -12,9 +12,7 @@ body {
     color: #666666;
     background-color: #f4f4f4;
 }
-.table-responsive-xl::webkit:scroll{
-    display:table;
-}
+
 .table tbody th{
     vertical-align: middle;
     text-align: center;
@@ -407,5 +405,13 @@ select:focus {
 @media (max-width: 600px) {
     .tm-contact-form {
         padding: 30px 25px;
+    }
+}
+.rank-table-scroll{
+    display: none;
+}
+@media (max-width: 400px) {
+    .rank-table-scroll{
+        display: inline-flex;
     }
 }
