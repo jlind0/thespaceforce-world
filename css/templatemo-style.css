@@ -375,7 +375,7 @@ select:focus {
     body{
         transform: rotate(-90deg);
         transform-origin: left top;
-        width: 95%;
+        width: 95vh;
         overflow:scroll;
         position: absolute;
         top: 100%;
