@@ -42,9 +42,6 @@ h2 { font-size: 1.8rem; }
     font-style: italic;
 }
 
-.container {
-    margin-top: 30px;
-}
 
 .tm-container-inner {
     margin: 0 auto;
@@ -391,12 +388,14 @@ select:focus {
     }
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .container {
         max-width: 1200px;
     }
+}*/
+.container{
+    max-width: 100% !important;
 }
-
 @media (max-width: 992px) {
     .tm-md-flex-center {
         display: flex;
