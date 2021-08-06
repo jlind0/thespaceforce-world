@@ -14,6 +14,10 @@ body {
 }
 .rank-table{
     overflow-x: auto;
+    display: inline-block;
+}
+.rank-table table{
+    min-width: 500px;
 }
 .table tbody th{
     vertical-align: middle;
