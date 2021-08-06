@@ -30,8 +30,16 @@ var YouTubePlayer = (function () {
         };
     }
     YouTubePlayer.prototype.CalcVideoSize = function () {
-        var width = Math.floor($("#playerInner").width() * 0.98);
-        var height = Math.floor(width * this.aspectRatio);
+        var width;
+        var height;
+        if ($("body").css("transform") == "rotate(-90deg)") {
+            width = Math.floor($("#playerInner").height() * 0.98);
+            height = Math.floor(width * (1 / this.aspectRatio));
+        }
+        else {
+            width = Math.floor($("#playerInner").width() * 0.98);
+            height = Math.floor(width * this.aspectRatio);
+        }
         return {
             Width: width,
             Height: height
