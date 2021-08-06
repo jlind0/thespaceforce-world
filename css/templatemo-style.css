@@ -12,6 +12,9 @@ body {
     color: #666666;
     background-color: #f4f4f4;
 }
+.rank-table{
+    overflow-x: auto;
+}
 .table tbody th{
     vertical-align: middle;
     text-align: center;
