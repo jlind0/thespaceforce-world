@@ -406,9 +406,13 @@ http://www.templatemo.com/tm-514-magazee
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 </script>
 <script type="text/javascript">
+  if(navigator.userAgent.includes("Edg"))
+    $("body").addClass("edge");
+</script>
+<script type="text/javascript">
 function onYouTubeIframeAPIReady(){
-    StartVideo = new YouTubePlayer($("#topPlayer").get(0), "pmQsrXLofMY", 9.0/16.0);
-  }
+  StartVideo = new YouTubePlayer($("#topPlayer").get(0), "pmQsrXLofMY", 9.0/16.0);
+}
 </script>
 </body>
 </html>

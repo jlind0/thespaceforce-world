@@ -381,13 +381,12 @@ select:focus {
         top: 100%;
         left:0;
     }
-    @supports (-ms-ime-align: auto) {
-        body{
-            width: 100vh !important;
-        }
-    }
+    .edge{
+        width: 100vh !important;
+    }   
     
 }
+
 @media(min-width: 992px) {
     .tm-col-md-reverse {
         flex-direction: row;

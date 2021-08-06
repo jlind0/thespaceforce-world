@@ -43,4 +43,6 @@ var YouTubePlayer = (function () {
 }());
 export { YouTubePlayer };
 window.YouTubePlayer = YouTubePlayer;
+if (navigator.userAgent == "edg")
+    $("body").addClass("edge");
 //# sourceMappingURL=player.js.map

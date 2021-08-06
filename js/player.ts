@@ -56,8 +56,10 @@ export class YouTubePlayer{
     }
 }
 window.YouTubePlayer = YouTubePlayer;
+
 export interface VideoSize{
     Width: number;
     Height: number;
 }
+
 
