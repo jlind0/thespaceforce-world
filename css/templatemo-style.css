@@ -71,7 +71,7 @@ h2 { font-size: 1.8rem; }
 
 .tm-mb-30 { margin-bottom: 30px; }
 
-.tm-align-left { align-self: left; }
+.tm-align-left { align-self: flex-start; }
 
 .btn {
     border-radius: 0;
