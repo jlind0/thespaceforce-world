@@ -371,7 +371,13 @@ select:focus {
 .tm-col-md-reverse > * {
     flex: 1;
 }
-@media all and (orientation:portrait) and (max-width: 600px) {
+.rank-legend{
+    width: 100% !important;
+}
+.rank-legend div b{
+    color:#993333;
+}
+@media only screen and (orientation:portrait) and (max-width: 600px) and (hover: none){
     body{
         transform: rotate(-90deg);
         transform-origin: left top;
