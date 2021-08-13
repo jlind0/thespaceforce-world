@@ -1,12 +1,54 @@
 ///<reference path="../node_modules/@types/jquery/index.d.ts"/>
 ///<reference path="../node_modules/@types/knockout/index.d.ts"/>
+declare global{
+    interface JQuery{
+        carousel(): void;
+    }
+    interface Event{
+        from?: number,
+        to?: number;
+    }
+}
 export interface Categories{
     categories: Category[]
 }
+
 export interface Category{
     id: string,
     description: string,
-    name: string
+    name: string,
+    positions?: Position[];
+}
+export interface Position{
+    name: string;
+    description: string;
+    rank: string,
+    type: RankType,
+    insignia: RankInsignia[],
+    careerFields: CareerFields[],
+    availableSlots: number,
+    requiredFields?: CareerFields[]
+
+}
+export const enum RankType{
+    nato = "nato",
+    un = "un"
+}
+export const enum RankInsignia{
+    gold ="gold",
+    black = "black"
+}
+export const enum CareerFields{
+    command = "command",
+    tactical = "tactical",
+    engineering = "engineering",
+    operations = "operations",
+    science = "science",
+    medical = "medical",
+    communications = "communications",
+    intelligence = "intelligence",
+    diplomatic = "diplomatic",
+    marine = "marine"
 }
 type FetchParams = Parameters<typeof window.fetch>;
 const fetchJson = <T>(...params: FetchParams) : Promise<T> => window.fetch(...params).then((resp) => resp.json() as Promise<T>);
@@ -15,12 +57,22 @@ document.addEventListener('DOMContentLoaded', () =>{
     var vm = new ApplyViewModel(data.categories);
     ko.applyBindings(vm);
     vm.addClickEvent();
+    $('.carousel').carousel();
+    $(".carousel").each((i,e) =>{
+        e.addEventListener("slide.bs.carousel", (evt) =>{
+            var ctx = <CategoryViewModel> ko.dataFor(e);
+            var positions = ctx.Positions();
+            for(let j = 0; j < positions.length; j++){
+                positions[j].Selected(j === evt.to);
+            }
+        });
+    })
    });
 });
 export class ApplyViewModel{
-    Categories : KnockoutObservableArray<CategoryViewModel>;
+    public Categories : KnockoutObservableArray<CategoryViewModel>;
     constructor(data: Category[]){
-        this.Categories = ko.observableArray<CategoryViewModel>();
+        this.Categories = ko.observableArray();
          for(let i = 0; i< data.length; i++){
             this.Categories.push(new CategoryViewModel(this, data[i], i == 0));
          }
@@ -48,6 +100,10 @@ export class CategoryViewModel{
     public ApplyActive: KnockoutComputed<string>;
     public ApplyShow: KnockoutComputed<string>;
     public TabIdHash: KnockoutComputed<string>;
+    public Positions: KnockoutObservableArray<PositionViewModel>;
+    public CarouselId: KnockoutComputed<string>;
+    public CarouselIdHash: KnockoutComputed<string>;
+    
     constructor(protected parent: ApplyViewModel, data : Category, isSelected: boolean){
         this.Id = ko.observable(data.id);
         this.Description = ko.observable(data.description);
@@ -58,6 +114,12 @@ export class CategoryViewModel{
                 return "#"+this.Id();
             }
         );
+        this.CarouselId = ko.pureComputed(() =>{
+            return "carousel-" + this.Id();
+        });
+        this.CarouselIdHash = ko.pureComputed(()=>{
+            return "#" + this.CarouselId();
+        });
         this.TabId = ko.pureComputed(() =>{
             return "tab-" + this.Id();
         });
@@ -70,6 +132,46 @@ export class CategoryViewModel{
         this.TabIdHash = ko.pureComputed(() =>{
             return "#" + this.TabId();
         });
-        
+        this.Positions = ko.observableArray();
+        if(data.positions !== undefined){
+            for(let i = 0; i < data.positions.length; i++){
+                this.Positions.push(new PositionViewModel(data.positions[i], i));
+            }
+        }
     }
+    
+    }
+    export class PositionViewModel {
+        public Name: KnockoutObservable<string>;
+        public Description: KnockoutObservable<string>;
+        public Type: KnockoutObservable<RankType>;
+        public RankInsignia: KnockoutObservableArray<RankInsignia>;
+        public RankInsigniaDisplay: KnockoutObservableArray<string>;
+        public CareerFields: KnockoutObservableArray<CareerFields>;
+        public RequiredFields: KnockoutObservableArray<CareerFields>;
+        public AvailableSlots: KnockoutObservable<number>;
+        public Index: KnockoutObservable<number>;
+        public ApplyActive: KnockoutComputed<string>;
+        public Selected: KnockoutObservable<boolean>;
+        constructor(protected position: Position, protected index: number) {
+            this.Selected = ko.observable(this.index === 0);
+            this.ApplyActive = ko.computed(() =>{
+                return this.Selected() ? "active" : "";
+            });
+            this.Index = ko.observable(index);
+            this.Name = ko.observable(position.name);
+            this.Description = ko.observable(position.description);
+            this.Type = ko.observable(position.type);
+            this.RankInsignia = ko.observableArray(position.insignia);
+            this.CareerFields = ko.observableArray(position.careerFields);
+            this.RequiredFields = position.requiredFields !== null ? ko.observableArray(position.requiredFields) : ko.observableArray();
+            this.AvailableSlots = ko.observable(position.availableSlots);
+            this.RankInsigniaDisplay = ko.observableArray();
+            for(let i = 0; i < position.insignia.length; i++){
+                switch(position.insignia[i]){
+                    case RankInsignia.black: this.RankInsigniaDisplay.push("img/ranks/black-pip.png"); break;
+                    case RankInsignia.gold: this.RankInsigniaDisplay.push("img/ranks/gold-pip.png"); break;
+                }
+            }
+        }
 }

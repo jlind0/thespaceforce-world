@@ -3,7 +3,98 @@
         {
             "name": "Junior",
             "description": "Junior Officer candidates are generally too young or otherwise disqualified for formal military service.",
-            "id": "junior"
+            "id": "junior",
+            "positions": [
+                {
+                    "name": "Ensign",
+                    "description": "There are no initial membership requirements for Ensign: there is only an expectation of participation in The Space Force community. Engaged Ensign's will be promoted to Lieutenant after several months of honorable service.",
+                    "rank": "OS-1",
+                    "type": "nato",
+                    "insignia":[
+                        "black"
+                    ],
+                    "careerFields":[
+                        "tactical",
+                        "engineering",
+                        "operations",
+                        "science",
+                        "medical",
+                        "communications",
+                        "intelligence",
+                        "marine"
+                    ],
+                    "availableSlots": -1
+                },
+                {
+                    "name": "Lieutenant",
+                    "description": "To enter as an OS-2 one must have demonstratable Cyber or Space skills, e.g.: strong social media presence, programming portfolio, model rocket design, exposure to university level physics or engineering, etc. OS-2's will be promoted to Lt. Cmdr. (OS-3) after six months of honorable service, pending availability.",
+                    "type": "nato",
+                    "insignia":[
+                        "gold"
+                    ],
+                    "rank": "OS-2",
+                    "careerFields":[
+                        "command",
+                        "tactical",
+                        "engineering",
+                        "operations",
+                        "science",
+                        "medical",
+                        "communications",
+                        "intelligence",
+                        "marine"
+                    ],
+                    "availableSlots": -1
+                },
+                {
+                    "name": "Lieutenant Commander",
+                    "description":"Those entering as OS-3 have all the requirements of OS-2; additionally they should currently serve in some leadership capacity, either professionally or volunteer. OS-3's are elligible for promotion into Fleet Ensign (OJ-1) in extraordinary cases and Commander (OS-4) in most others after 9 months of honorable service, pending availability.",
+                    "type": "nato",
+                    "insignia":[
+                        "black",
+                        "gold"
+                    ],
+                    "rank": "OJ-3",
+                    "careerFields":[
+                        "command",
+                        "tactical",
+                        "engineering",
+                        "operations",
+                        "science",
+                        "medical",
+                        "communications",
+                        "intelligence",
+                        "diplomatic",
+                        "marine"
+                    ],
+                    "availableSlots": 1024
+                },
+                {
+                    "name": "Fleet Ensign",
+                    "description":"To enter as a Fleet Ensign one must be enrolled in a training program such as JROTC, ROTC, Civil Air Patrol (CAP), Boy Scouts, Girl Scouts, etc &amp; hold a leadership position in that organization.OJ-1's are cross-functional leveraging both Command and at least one other skill set.Fleet Ensign's are elligable for promotion to Fleet Commander (OJ-2) after one year of honorable service and Captain (OS-5) after 9 months, pending availability.",
+                    "type": "un",
+                    "insignia":[
+                        "black",
+                        "black"
+                    ],
+                    "rank":"OJ-1",
+                    "careerFields":[
+                        "tactical",
+                        "engineering",
+                        "operations",
+                        "science",
+                        "medical",
+                        "communications",
+                        "intelligence",
+                        "diplomatic",
+                        "marine"
+                    ],
+                    "requiredFields":[
+                        "command"
+                    ],
+                    "availableSlots": 64
+                }
+            ]
         },
         {
             "name": "Senior",
@@ -12,7 +103,7 @@
         },
         {
             "name": "Flag",
-            "description": "Flag Officers represent the executive leadership of Space Force, generally speaking they have substantial standing in the defense community either through previous senior military service, exceptional commercial background or both.",
+            "description": "Flag Officers represent the executive leadership of The Space Force, generally speaking they have substantial standing in the defense community either through previous senior military service, exceptional commercial background or both.",
             "id": "flag"
         },
         {

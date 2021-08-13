@@ -232,99 +232,44 @@ http://www.templatemo.com/tm-514-magazee
 
 <!-- 5th Section -->
 <section class="row tm-section tm-mb-30" id="apply">
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0">
+    <div class="tm-flex-center p-1">
+      <div class="tm-flex-center tm-flex-col">
+  <h2 class="tm-text-color-primary mb-4">Apply for a Position</h2>
+  
   <ul class="nav nav-tabs" id="applyTabs" role="tablist" data-bind="foreach: Categories">
     <li class="nav-item" role="presentation">
       <button class="nav-link" data-bs-toggle="tab" data-bind="attr:{'aria-controls': Id, 'data-bs-toggle': IdHash, id: TabId, 'aria-selected': Selected}, text: Name, class: ApplyActive" type="button" role="tab"></button>
     </li>
   </ul>
-  <div class="tab-content" id="applyTabContent" data-bind="foreach: Categories">
+  <div class="tab-content" id="applyTabContent" data-bind="foreach: Categories" style="min-width: 100%;padding:25px;">
     <div class="tab-pane fade" data-bind="attr:{id: Id, 'aria-labelledby': TabId}, class: ApplyShow" role="tabpanel">
-      <p data-bind="text: Description"></p>
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 pl-lg-4 pr-xl-0 mb-4 mb-lg-0">
-        <div class="tm-flex-center tm-align-top">
-         <div class="tm-pricing-table">
-          <div class="tm-bg-color-secondary tm-text-color-white text-center tm-font-thin tm-pricing-header">
-            <p class="mb-0 tm-pricing-header-title">Standard Plan</p>
-            <p class="mb-0 tm-pricing-header-subtitle">($25 per month)</p>
-          </div>
-          <div class="tm-pricing-body">
-            <ul class="tm-feature-list">
-              <li>Ut sit amet augue elit</li>
-              <li>Vivamus eget tortor in ante</li>
-              <li>Scelerisque gravida</li>
-              <li>Vestibulum auctor</li>
-              <li>Condimentum sem</li>
-              <li>Suscipit arcu accumsan</li>
-            </ul>
-            <a href="#" class="btn btn-secondary">Buy now</a>
+      <p class="mb-0" data-bind="text: Description"></p>
+      <div data-bind="attr:{id:CarouselId}" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators" data-bind="foreach: Positions">
+          <button data-bind="attr:{'data-bs-target':$parent.CarouselIdHash, 'data-bs-slide-to':index,'aria-label':Name, 'aria-current':Selected},class: ApplyActive"></button>
+        </div>
+        <div class="carousel-inner" data-bind="foreach: Positions">
+          <div class="carousel-item" data-bind="class: ApplyActive">
+            <div style="background-color: black;min-width:100%;padding: 25px;min-height: 500px;"></div>
+            <div class="carousel-caption d-block">
+              <h3 data-bind="text:Name"></h3>
+              <!-- ko foreach: RankInsigniaDisplay -->
+            <img data-bind="attr:{src:$rawData}"  style="max-width: 30px !important;"/>
+            <!-- /ko -->
+              <p data-bind="text:Description"></p>
+            </div>
           </div>
         </div>
-      </div>
+        <button class="carousel-control-prev" type="button" data-bs-slide="prev" data-bind="attr:{'data-bs-target':CarouselIdHash}">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-slide="next" data-bind="attr:{'data-bs-target':CarouselIdHash}">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
     
-    
-  </div>
- 
-<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 pl-xl-0 mb-4 mb-lg-0">
-  <div class="tm-flex-center tm-align-top">
-   <div class="tm-pricing-table">
-    <div class="tm-bg-color-secondary tm-text-color-white text-center tm-font-thin tm-pricing-header">
-      <p class="mb-0 tm-pricing-header-title">Advanced Plan</p>
-      <p class="mb-0 tm-pricing-header-subtitle">($40 per month)</p>
-    </div>
-    <div class="tm-pricing-body">
-      <ul class="tm-feature-list">
-        <li>Vel eleifend enim</li>
-        <li>Morbi blandit metus</li>
-        <li>Fusce porta lectus vel elit</li>
-        <li>Cras eu dolor lorem</li>
-        <li>Pharetra et sapien</li>
-        <li>Quisque auctor non magna</li>
-      </ul>
-      <a href="#" class="btn btn-secondary">Buy now</a>
-    </div>
-  </div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 pl-xl-0 mb-4 mb-lg-0">
-  <div class="tm-flex-center tm-align-top">
-   <div class="tm-pricing-table">
-    <div class="tm-bg-color-secondary tm-text-color-white text-center tm-font-thin tm-pricing-header">
-      <p class="mb-0 tm-pricing-header-title">Advanced Plan</p>
-      <p class="mb-0 tm-pricing-header-subtitle">($40 per month)</p>
-    </div>
-    <div class="tm-pricing-body">
-      <ul class="tm-feature-list">
-        <li>Vel eleifend enim</li>
-        <li>Morbi blandit metus</li>
-        <li>Fusce porta lectus vel elit</li>
-        <li>Cras eu dolor lorem</li>
-        <li>Pharetra et sapien</li>
-        <li>Quisque auctor non magna</li>
-      </ul>
-      <a href="#" class="btn btn-secondary">Buy now</a>
-    </div>
-  </div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 pl-xl-0 mb-4 mb-lg-0">
-  <div class="tm-flex-center tm-align-top">
-   <div class="tm-pricing-table">
-    <div class="tm-bg-color-secondary tm-text-color-white text-center tm-font-thin tm-pricing-header">
-      <p class="mb-0 tm-pricing-header-title">Advanced Plan</p>
-      <p class="mb-0 tm-pricing-header-subtitle">($40 per month)</p>
-    </div>
-    <div class="tm-pricing-body">
-      <ul class="tm-feature-list">
-        <li>Vel eleifend enim</li>
-        <li>Morbi blandit metus</li>
-        <li>Fusce porta lectus vel elit</li>
-        <li>Cras eu dolor lorem</li>
-        <li>Pharetra et sapien</li>
-        <li>Quisque auctor non magna</li>
-      </ul>
-      <a href="#" class="btn btn-secondary">Buy now</a>
     </div>
   </div>
 </div>
@@ -420,6 +365,7 @@ http://www.templatemo.com/tm-514-magazee
 </div>
 <!-- load JS -->
 <script src="js/jquery-3.2.1.slim.min.js"></script>         <!-- https://jquery.com/ -->
+<script src="js/bootstrap.min.js" type="application/javascript"></script>
 <script>
 
   /* DOM is ready
