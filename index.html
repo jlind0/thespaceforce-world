@@ -234,11 +234,11 @@ http://www.templatemo.com/tm-514-magazee
 <section class="row tm-section tm-mb-30" id="apply">
   <ul class="nav nav-tabs" id="applyTabs" role="tablist" data-bind="foreach: Categories">
     <li class="nav-item" role="presentation">
-      <button class="nav-link" data-bs-toggle="tab" data-bind="attr:{aria-controls: Id, data-bs-toggle: IdHash, id: TabId, aria-selected: IsSelected}, title: Name, class: ApplyActive" type="button" role="tab"></button>
+      <button class="nav-link" data-bs-toggle="tab" data-bind="attr:{'aria-controls': Id, 'data-bs-toggle': IdHash, id: TabId, 'aria-selected': Selected}, text: Name, class: ApplyActive" type="button" role="tab"></button>
     </li>
   </ul>
   <div class="tab-content" id="applyTabContent" data-bind="foreach: Categories">
-    <div class="tab-pane fade" data-bind="attr:{id: Id, aria-labelledby: TabId}, class: ApplyShow" role="tabpanel">
+    <div class="tab-pane fade" data-bind="attr:{id: Id, 'aria-labelledby': TabId}, class: ApplyShow" role="tabpanel">
       <p data-bind="text: Description"></p>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 pl-lg-4 pr-xl-0 mb-4 mb-lg-0">
         <div class="tm-flex-center tm-align-top">

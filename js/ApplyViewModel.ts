@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () =>{
    var cats = fetchJson<Categories>("files/positions.json").then(data =>{
     var vm = new ApplyViewModel(data.categories);
     ko.applyBindings(vm);
+    vm.addClickEvent();
    });
 });
 export class ApplyViewModel{
@@ -21,8 +22,20 @@ export class ApplyViewModel{
     constructor(data: Category[]){
         this.Categories = ko.observableArray<CategoryViewModel>();
          for(let i = 0; i< data.length; i++){
-            this.Categories.push(new CategoryViewModel(data[i], i == 0));
+            this.Categories.push(new CategoryViewModel(this, data[i], i == 0));
          }
+    }
+    public addClickEvent(){
+        var cats = this.Categories();
+        for(let i =0; i < cats.length; i++){
+            $(cats[i].TabIdHash()).on('click', () => this.changeSelection(cats[i].TabId()));
+        }
+    }
+    public changeSelection(tabId: string){
+        var cats = this.Categories();
+        for(let i = 0; i < cats.length; i++){
+            cats[i].Selected(cats[i].TabId() === tabId);
+        }
     }
 }
 export class CategoryViewModel{
@@ -34,17 +47,18 @@ export class CategoryViewModel{
     public TabId: KnockoutComputed<string>;
     public ApplyActive: KnockoutComputed<string>;
     public ApplyShow: KnockoutComputed<string>;
-    constructor(data : Category, isSelected: boolean){
+    public TabIdHash: KnockoutComputed<string>;
+    constructor(protected parent: ApplyViewModel, data : Category, isSelected: boolean){
         this.Id = ko.observable(data.id);
         this.Description = ko.observable(data.description);
         this.Name = ko.observable(data.name);
         this.Selected = ko.observable(isSelected);
-        this.IdHash = ko.computed<string>(
+        this.IdHash = ko.pureComputed<string>(
             () =>{
                 return "#"+this.Id();
             }
         );
-        this.TabId = ko.computed(() =>{
+        this.TabId = ko.pureComputed(() =>{
             return "tab-" + this.Id();
         });
         this.ApplyActive = ko.pureComputed(()=>{
@@ -53,5 +67,9 @@ export class CategoryViewModel{
         this.ApplyShow = ko.pureComputed(() =>{
             return this.Selected() ? "show active" :"";
         });
+        this.TabIdHash = ko.pureComputed(() =>{
+            return "#" + this.TabId();
+        });
+        
     }
 }
