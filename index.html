@@ -242,7 +242,7 @@ http://www.templatemo.com/tm-514-magazee
       <button class="nav-link" data-bs-toggle="tab" data-bind="attr:{'aria-controls': Id, 'data-bs-toggle': IdHash, id: TabId, 'aria-selected': Selected}, text: Name, class: ApplyActive" type="button" role="tab"></button>
     </li>
   </ul>
-  <div class="tab-content" id="applyTabContent" data-bind="foreach: Categories" style="min-width: 100%;padding:25px;">
+  <div class="tab-content" id="applyTabContent" data-bind="foreach: Categories" style="min-width: 100%;padding-right: 60px !important;padding-left: 15px !important;">
     <div class="tab-pane fade" data-bind="attr:{id: Id, 'aria-labelledby': TabId}, class: ApplyShow" role="tabpanel">
       <p class="mb-0" data-bind="text: Description"></p>
       <div data-bind="attr:{id:CarouselId}" class="carousel slide" data-bs-interval="false">
@@ -250,8 +250,8 @@ http://www.templatemo.com/tm-514-magazee
           <button data-bind="attr:{'data-bs-target':$parent.CarouselIdHash, 'data-bs-slide-to':index,'aria-label':Name, 'aria-current':Selected},class: ApplyActive"></button>
         </div>
         <div class="carousel-inner" data-bind="foreach: Positions">
-          <div class="carousel-item" data-bind="class: ApplyActive">
-            <div style="background-color: black;min-width:100%;padding: 25px;min-height: 500px;"></div>
+          <div class="carousel-item" data-bind="class: ApplyActive" >
+            <div style="background-color: black;min-width:100%;min-height: 500px;"></div>
             <div class="carousel-caption d-block">
               <h3 data-bind="text:Name"></h3>
               <!-- ko foreach: RankInsigniaDisplay -->
