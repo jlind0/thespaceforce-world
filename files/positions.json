@@ -1,0 +1,24 @@
+{
+    "categories": [
+        {
+            "name": "Junior",
+            "description": "Junior Officer candidates are generally too young or otherwise disqualified for formal military service.",
+            "id": "junior"
+        },
+        {
+            "name": "Senior",
+            "description": "Senior Officers have either been promoted from the Junior ranks or enter based on commercial or military history that is above and beyond entry level expectations.",
+            "id": "senior"
+        },
+        {
+            "name": "Flag",
+            "description": "Flag Officers represent the executive leadership of Space Force, generally speaking they have substantial standing in the defense community either through previous senior military service, exceptional commercial background or both.",
+            "id": "flag"
+        },
+        {
+            "name": "Supreme",
+            "description": "The Supreme position, Fleet Admiral, is designed to be held by a singular person. We have a few specific people in mind for this role however will consider those with extraordinary backgrounds to fill the role on an interim basis.",
+            "id": "supreme"
+        }
+    ]
+}

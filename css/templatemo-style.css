@@ -377,6 +377,10 @@ select:focus {
 .rank-legend div b{
     color:#993333;
 }
+.tm-align-top{
+    align-self:flex-start;
+    margin: 10px;
+}
 @media only screen and (orientation:portrait) and (max-width: 600px) and (hover: none){
     body{
         transform: rotate(-90deg);

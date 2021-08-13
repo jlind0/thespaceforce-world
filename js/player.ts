@@ -1,5 +1,4 @@
 ///<reference path="../node_modules/@types/jquery/index.d.ts"/>
-///<reference path="../node_modules/@types/knockout/index.d.ts"/>
 ///<reference path="../node_modules/@types/youtube/index.d.ts"/>
 ///<reference path="../node_modules/@types/youtube-player/index.d.ts"/>
 export 
