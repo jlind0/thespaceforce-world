@@ -245,7 +245,7 @@ http://www.templatemo.com/tm-514-magazee
   <div class="tab-content" id="applyTabContent" data-bind="foreach: Categories" style="min-width: 100%;padding:25px;">
     <div class="tab-pane fade" data-bind="attr:{id: Id, 'aria-labelledby': TabId}, class: ApplyShow" role="tabpanel">
       <p class="mb-0" data-bind="text: Description"></p>
-      <div data-bind="attr:{id:CarouselId}" class="carousel slide" data-bs-ride="carousel">
+      <div data-bind="attr:{id:CarouselId}" class="carousel slide" data-bs-interval="false">
         <div class="carousel-indicators" data-bind="foreach: Positions">
           <button data-bind="attr:{'data-bs-target':$parent.CarouselIdHash, 'data-bs-slide-to':index,'aria-label':Name, 'aria-current':Selected},class: ApplyActive"></button>
         </div>
