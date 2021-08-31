@@ -123,7 +123,7 @@
                     "requiredFields":[
                         "command"
                     ],
-                    "availableSlots": 256
+                    "availableSlots": 384
                 },
                 {
                     "name": "Fleet Commander",
@@ -177,7 +177,7 @@
                         "operations",
                         "communications"
                     ],
-                    "availableSlots": 64
+                    "availableSlots": 128
                     
                 }
             ]
@@ -211,7 +211,7 @@
                         "engineering",
                         "science"
                     ],
-                    "availableSlots": 16
+                    "availableSlots": 32
                 },
                 {
                     "name": "Admiral",
@@ -238,7 +238,7 @@
                         "engineering",
                         "science"
                     ],
-                    "availableSlots": 16
+                    "availableSlots": 8
                 },
                 {
                     "name": "Fleet Captain",
