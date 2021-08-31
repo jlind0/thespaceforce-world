@@ -1,0 +1,74 @@
+{
+    "careerFields":[
+        {
+            "name":"Command",
+            "id":"command",
+            "color":"#AD3331",
+            "forecolor":"white",
+            "description": "Those in the command field are leaders in their fields and are responsible for directing and applying strategy and policy."
+        },
+        {
+            "name":"Tactical",
+            "id":"tactical",
+            "color":"#FF0400",
+            "forecolor":"white",
+            "description":"Tacticians provide guidance and development of plans for exerting our will to transform adversarial space."
+        },
+        {
+            "name":"Engineering",
+            "id":"engineering",
+            "color":"#BC9C2F",
+            "forecolor":"white",
+            "description":"Coils, Antimatter Containment, Warp Drive. I'm giving her all she's got! Engineers design and implement technical solutions to solve the challenges facing the fleet."
+        },
+        {
+            "name":"Operations",
+            "id":"operations",
+            "color":"#FFC600",
+            "forecolor":"black",
+            "description":"Operators execute tactical plans with the tools built from engineering."
+        },
+        {
+            "name":"Science",
+            "id":"science",
+            "color":"#186C76",
+            "forecolor":"white",
+            "description":"The Science career field is the Research & Development arm of The Space Force."
+        },
+        {
+            "name":"Medical",
+            "id":"medical",
+            "color":"#1CCBE0",
+            "forecolor":"orange",
+            "description":"Physicians and Psychologists."
+        },
+        {
+            "name":"Communications",
+            "id":"communications",
+            "color":"#1664C8",
+            "forecolor":"white",
+            "description":"Comms people are responsible for connecting both internal members and external partners through social and professional media."
+        },
+        {
+            "name":"Intelligence",
+            "id":"intelligence",
+            "color":"#635D5D",
+            "forecolor":"orange",
+            "description":"Intel Operatives investigate and profile adversaries' positions."
+        },
+        {
+            "name":"Diplomatic",
+            "id":"diplomatic",
+            "color":"#471D5F",
+            "forecolor":"white",
+            "description":"A Space Force diplomat is responsible for achieving understanding among our allies and adversaries alike."
+        },
+        {
+            "name":"Marine",
+            "id":"marine",
+            "color":"#314927",
+            "forecolor":"white",
+            "description":"Marines are jack/master of all trades and are deployed in cyber and space to affect change."
+        }
+    ]
+}

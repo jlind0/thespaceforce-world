@@ -4,6 +4,7 @@
         "@types/knockout": "^3.4.71",
         "@types/youtube": "0.0.44",
         "@types/youtube-player": "^5.5.4",
+        "linq": "^3.2.4",
         "youtube-player": "^5.5.2"
     }
 }

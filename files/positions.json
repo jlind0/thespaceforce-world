@@ -7,7 +7,7 @@
             "positions": [
                 {
                     "name": "Ensign",
-                    "description": "There are no initial membership requirements for Ensign: there is only an expectation of participation in The Space Force community. Engaged Ensign's will be promoted to Lieutenant after several months of honorable service.",
+                    "description": "There are no initial membership requirements for Ensign: there is only an expectation of participation in The Space Force community. Engaged Ensigns will be promoted to Lieutenant (OS-2) after several months of honorable service. Ensigns are assigned to a Unit.",
                     "rank": "OS-1",
                     "type": "nato",
                     "insignia":[
@@ -27,7 +27,7 @@
                 },
                 {
                     "name": "Lieutenant",
-                    "description": "To enter as an OS-2 one must have demonstratable Cyber or Space skills, e.g.: strong social media presence, programming portfolio, model rocket design, exposure to university level physics or engineering, etc. OS-2's will be promoted to Lt. Cmdr. (OS-3) after six months of honorable service, pending availability.",
+                    "description": "To enter as an OS-2 one must have demonstrable Cyber or Space skills, e.g.: strong social media presence, programming portfolio, model rocket design, exposure to university level physics or engineering, etc. OS-2's will be promoted to Lt. Cmdr. (OS-3) after six months of honorable service, pending availability. Lieutenants lead a Unit and have visibility into that structure's Squadron.",
                     "type": "nato",
                     "insignia":[
                         "gold"
@@ -39,7 +39,6 @@
                         "engineering",
                         "operations",
                         "science",
-                        "medical",
                         "communications",
                         "intelligence",
                         "marine"
@@ -48,13 +47,13 @@
                 },
                 {
                     "name": "Lieutenant Commander",
-                    "description":"Those entering as OS-3 have all the requirements of OS-2; additionally they should currently serve in some leadership capacity, either professionally or volunteer. OS-3's are elligible for promotion into Fleet Ensign (OJ-1) in extraordinary cases and Commander (OS-4) in most others after 9 months of honorable service, pending availability.",
+                    "description":"Those entering as OS-3 have all the requirements of OS-2; additionally they should currently serve in some leadership capacity, either professionally or volunteer. OS-3's are eligible for promotion into Fleet Ensign (OJ-1) in extraordinary cases and Commander (OS-4) in most others after 9 months of honorable service, pending availability. Lt. Commander's lead a Squadron and have visibility into that structure's Division.",
                     "type": "nato",
                     "insignia":[
-                        "black",
+                        "gold",
                         "gold"
                     ],
-                    "rank": "OJ-3",
+                    "rank": "OS-3",
                     "careerFields":[
                         "command",
                         "tactical",
@@ -64,14 +63,13 @@
                         "medical",
                         "communications",
                         "intelligence",
-                        "diplomatic",
                         "marine"
                     ],
                     "availableSlots": 1024
                 },
                 {
                     "name": "Fleet Ensign",
-                    "description":"To enter as a Fleet Ensign one must be enrolled in a training program such as JROTC, ROTC, Civil Air Patrol (CAP), Boy Scouts, Girl Scouts, etc & hold a leadership position in that organization. OJ-1's are cross-functional leveraging both Command and at least one other skill set. Fleet Ensign's are elligable for promotion to Fleet Commander (OJ-2) after one year of honorable service and Captain (OS-5) after 9 months, pending availability.",
+                    "description":"To enter as a Fleet Ensign one must be enrolled in a training program such as JROTC, ROTC, Civil Air Patrol (CAP), Boy Scouts, Girl Scouts, etc & hold a leadership position in that organization. OJ-1's are cross-functional leveraging both Command and at least one other skill set. Fleet Ensign's are eligible for promotion to Fleet Commander (OJ-2) after one year of honorable service and Captain (OS-5) after 9 months, pending availability. Fleet Ensigns command OS-3's and are responsible, in coordination with their Fleet Commander, to create Units and Squadrons.",
                     "type": "un",
                     "insignia":[
                         "black",
@@ -99,12 +97,176 @@
         {
             "name": "Senior",
             "description": "Senior Officers have either been promoted from the Junior ranks or enter based on commercial or military history that is above and beyond entry level expectations.",
-            "id": "senior"
+            "id": "senior",
+            "positions": [
+                {
+                    "name": "Commander",
+                    "description":"Entering as a Commander of Space requires Space and/or Cyberspace credentials, with an emphasis on formal professional experience; most people will be promoted into this role from Lt. Commander and not enter directly. Commanders are often the executive officers of Captains and are expected to be able to dedicate significant time to The Space Force. Commanders are eligible for promotion into Captain (OS-5) after one year of service or Fleet Commander (OJ-2) after 18 months, depending on availability of positions. Commanders lead a Group and have visibility into that structure's Directorate.",
+                    "type": "nato",
+                    "insignia":[
+                        "gold",
+                        "gold",
+                        "gold"
+                    ],
+                    "rank":"OS-4",
+                    "careerFields":[
+                        "tactical",
+                        "engineering",
+                        "operations",
+                        "science",
+                        "medical",
+                        "communications",
+                        "intelligence",
+                        "diplomatic",
+                        "marine"
+                    ],
+                    "requiredFields":[
+                        "command"
+                    ],
+                    "availableSlots": 256
+                },
+                {
+                    "name": "Fleet Commander",
+                    "description":"To Enter as a Fleet Commander one must have significant command presence and a professional history of management level positions in addition to a \"real world\" relationship with a Flag Officer. Fleet Commander's hold positions either as the Executive Officer of a Fleet Captain or Director level roles at the *.* level. OJ-2's are promotable into Vice Admiral (OS-6) after 18 months of exceptional service or rarely Fleet Captain (OJ-3) after 2 years of service above and beyond the call of duty, pending availability. Fleet Commanders are responsible for creating, in consultation with their Fleet Captain, Divisions and Groups with additional visibility into a Directorate.",
+                    "type": "un",
+                    "insignia":[
+                        "black",
+                        "black",
+                        "black"
+                    ],
+                    "rank":"OJ-2",
+                    "careerFields":[
+                        "engineering",
+                        "science",
+                        "medical",
+                        "intelligence",
+                        "diplomatic",
+                        "marine"
+                    ],
+                    "requiredFields":[
+                        "command",
+                        "tactical",
+                        "operations",
+                        "communications"
+                    ],
+                    "availableSlots": 16
+                    
+                },
+                {
+                    "name": "Captain",
+                    "description":"Entering Captains of Space represent the most senior operational Senior Officers and are expected to have significant industry and/or military service in management/command positions. They are often responsible for the day to day leadership at the Group level with visibility into the Directorate level. Captains are eligible for promotion into Vice Admiral (OS-6) after 18 months and, under exceptional circumstances, into a Fleet Captain role after two years, pending availability.",
+                    "type": "nato",
+                    "insignia":[
+                        "gold",
+                        "gold",
+                        "gold",
+                        "gold"
+                    ],
+                    "rank":"OS-5",
+                    "careerFields":[
+                        "engineering",
+                        "science",
+                        "medical",
+                        "intelligence",
+                        "diplomatic",
+                        "marine"
+                    ],
+                    "requiredFields":[
+                        "command",
+                        "tactical",
+                        "operations",
+                        "communications"
+                    ],
+                    "availableSlots": 64
+                    
+                }
+            ]
         },
         {
             "name": "Flag",
             "description": "Flag Officers represent the executive leadership of The Space Force, generally speaking they have substantial standing in the defense community either through previous senior military service, exceptional commercial background or both.",
-            "id": "flag"
+            "id": "flag",
+            "positions": [
+                {
+                    "name": "Vice Admiral",
+                    "description":"To enter as a Vice Admiral one must have senior level management/command experience at a major commercial or NATO military. Vice Admirals lead Directorates and have visibility into Fleets. OS-6's can be promoted into Admiral (OS-7) after three years of substantial contributions to The Space Force.",
+                    "type": "nato",
+                    "insignia":[
+                        "gold",
+                        "black",
+                        "black",
+                        "gold"
+                    ],
+                    "rank":"OS-6",
+                    "careerFields":[
+                        "medical",
+                        "intelligence",
+                        "diplomatic"
+                    ],
+                    "requiredFields":[
+                        "command",
+                        "tactical",
+                        "operations",
+                        "communications",
+                        "engineering",
+                        "science"
+                    ],
+                    "availableSlots": 16
+                },
+                {
+                    "name": "Admiral",
+                    "description":"Admirals are the highest NATO level role in The Space Force; to enter as an Admiral one must have executive level experience at a major commercial organization or active/retired flag status in an allied military. OS-7's can be promoted to Fleet Captain (OJ-3) after above and beyond service in their role. Admirals command a Fleet.",
+                    "type": "nato",
+                    "insignia":[
+                        "gold",
+                        "gold",
+                        "gold",
+                        "gold",
+                        "gold"
+                    ],
+                    "rank":"OS-7",
+                    "careerFields":[
+                        "medical",
+                        "intelligence",
+                        "diplomatic"
+                    ],
+                    "requiredFields":[
+                        "command",
+                        "tactical",
+                        "operations",
+                        "communications",
+                        "engineering",
+                        "science"
+                    ],
+                    "availableSlots": 16
+                },
+                {
+                    "name": "Fleet Captain",
+                    "description":"Fleet Captains are the highest ranking operational officer slot in The Space Force. They are responsible, in consultation with the Fleet Admiral, for creating Directorates and have visibility into Fleets. While a Fleet Captain could move into the Fleet Admiral role that would be an exceedingly rare occurrence.",
+                    "type": "un",
+                    "insignia":[
+                        "black",
+                        "black",
+                        "black",
+                        "black"
+                    ],
+                    "rank":"OJ-3",
+                    "careerFields":[
+                        "medical",
+                        "intelligence"
+                    ],
+                    "requiredFields":[
+                        "command",
+                        "tactical",
+                        "operations",
+                        "communications",
+                        "engineering",
+                        "science",
+                        "diplomatic"
+                    ],
+                    "availableSlots": 4
+                }
+            ]
         },
         {
             "name": "Supreme",
